@@ -6,17 +6,23 @@ OCR → Text Extraction → Regex Feature Engineering → ML Classification → 
 
 ```mermaid
 flowchart LR
-    A[Input Documents\n(PDF / Images)]
-    B[OCR Processing\n(Tesseract)]
-    C[Text Extraction\n(Header Region)]
-    D[Regex Candidate Extraction\n(Date Strings)]
-    E[Feature Engineering\n(Position, Keywords, Time)]
-    F[ML Model\n(Logistic Regression)]
-    G[Rule-Based Validation\n(Date Window, Consensus)]
-    H[Final Output\n(Excel Predictions)]
+    A["Input Documents (PDF / Images)"]
+    B["OCR Processing (Tesseract)"]
+    C["Text Extraction (Header Region)"]
+    D["Regex Candidate Extraction (Date Strings)"]
+    E["Feature Engineering (Position, Keywords, Time)"]
+    F["ML Model (Logistic Regression)"]
+    G["Rule-Based Validation (Date Window, Consensus)"]
+    H["Final Output (Excel Predictions)"]
 
-    A --> B --> C --> D --> E --> F --> G --> H
-
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+```
 # Recording Date Extraction Pipeline
 
 This portfolio project demonstrates a lightweight OCR + feature engineering + classification workflow for extracting likely recording dates from document images and OCR text.
