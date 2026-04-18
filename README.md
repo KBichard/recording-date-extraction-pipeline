@@ -1,3 +1,7 @@
+## Pipeline Architecture
+
+OCR → Text Extraction → Regex Feature Engineering → ML Classification → Rule-Based Validation → Final Prediction
+
 # Recording Date Extraction Pipeline
 
 This portfolio project demonstrates a lightweight OCR + feature engineering + classification workflow for extracting likely recording dates from document images and OCR text.
